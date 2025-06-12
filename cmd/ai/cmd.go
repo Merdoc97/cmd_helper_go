@@ -6,9 +6,9 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-var cmdPrompt string = "Please generate command for description %s. \r\n" +
-	"Response should be as in console format. \r\n" +
-	"Response should contains example. \r\n"
+var cmdPrompt string = "Please generate console command for description %s." +
+	"Response should be as in console format." +
+	"Response should contains example."
 
 func Cmd(c *cli.Context) {
 	s := c.String("c")

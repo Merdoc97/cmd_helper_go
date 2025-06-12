@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/openai/openai-go"
 	"github.com/openai/openai-go/option"
+	"github.com/openai/openai-go/packages/param"
 	"os"
 )
 
@@ -25,12 +26,14 @@ func Tts(request string) {
 		Messages: []openai.ChatCompletionMessageParamUnion{
 			openai.UserMessage(request),
 		},
-		Model: apiModel,
+		Model:       apiModel,
+		Temperature: param.Opt[float64]{Value: float64(0.0)},
+		MaxTokens:   param.Opt[int64]{Value: int64(500)},
 	})
 
 	for stream.Next() {
 		chunk := stream.Current()
 		fmt.Print(chunk.Choices[0].Delta.Content)
 	}
-
+	fmt.Println()
 }

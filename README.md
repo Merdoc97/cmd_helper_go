@@ -84,10 +84,3 @@ This will generate the appropriate command-line command based on your descriptio
 - [github.com/openai/openai-go](https://github.com/openai/openai-go): OpenAI Go client
 - [github.com/urfave/cli/v2](https://github.com/urfave/cli/v2): Command line interface framework
 
-## License
-
-[Add license information here]
-
-## Contributing
-
-[Add contribution guidelines here]
