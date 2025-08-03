@@ -1,4 +1,4 @@
-module awesomeProject
+module cli-assist
 
 go 1.24
 
